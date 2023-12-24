@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Ogrenci>
+@{
+    ViewData["Title"] = "ListStudent";
+}
+
+
+<a class="btn btn-primary btn-danger"  asp-action="AddStudent" asp asp-controller="Student">Add Student</a>
+<h1>ListStudent</h1>
+
+
+
+<table class="table table-striped">
+    <thead>
+      @*   <h1  class="btn btn-primary btn-danger">"ADD Student</h1> *@
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Numara</th>
+            <th>Bölüm</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var ogr in Model)
+        {
+            <tr>
+                <td>@ogr.Ad</td>
+                <td>@ogr.Soyad</td>
+                <td>@ogr.Numara</td>
+                <td>@ogr.Bolum</td>
+                <td> <a href="/Student/UpdateStudent/@ogr.Ogrenciid" class="btn btn-sm btn-primary btn-primary">Düzenle</a>  <a href="/Student/DeleteStudent/@ogr.Ogrenciid" class="btn btn-sm btn-danger" onclick="return confirm('Emin Misiniz..')">Sil</a>  </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
