@@ -1,24 +1,24 @@
 ﻿@model Ogretmen
 @{
-    ViewData["Title"] = "AddTeacher";
+    ViewData["Title"] = "UpdateTeacher";
 }
 
-<h1>AddTeacher</h1>
+<h1>UpdateTeacher</h1>
 
+<form asp-action="UpdateTeacher" asp-controller="Teacher" method="post">
+    <input type="hidden" asp-for="Tckimlik" />
 
-<form asp-action="AddTeacher" asp-controller="Ogretmen" method="post" >
-  
     <div>
-        <label class="form-label">Tckimlik</label>
+        <label class="form-label">TC Kimlik</label>
         <input asp-for="Tckimlik" class="form-control" />
     </div>
+
     <div>
         <label class="form-label">Ad</label>
         <input asp-for="Ad" class="form-control" />
     </div>
-
     <div>
-        <label asp-for="Soyad" class="form-label"></label>
+        <label class="form-label">Soyad</label>
         <input asp-for="Soyad" class="form-control" />
     </div>
 
@@ -26,14 +26,14 @@
         <label asp-for="Dtarih" class="form-label"></label>
         <input asp-for="Dtarih" class="form-control" />
     </div>
+
     <div>
         <label asp-for="Alan" class="form-label"></label>
         <input asp-for="Alan" class="form-control" />
     </div>
 
-    <input class="btn btn-danger" type="submit" value="Kaydet" />
+    <input class="btn btn-primary" type="submit" value="Kaydet" />
 
 
 
 </form>
-

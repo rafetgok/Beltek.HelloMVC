@@ -27,13 +27,15 @@ namespace Beltek.HelloMVC.Models
 
 
             modelBuilder.Entity<Ogretmen>().ToTable("tblOgretmenler");
+
             modelBuilder.Entity<Ogretmen>().HasKey(o => o.Tckimlik);
             modelBuilder.Entity<Ogretmen>().Property(o => o.Tckimlik).HasColumnType("varchar").HasMaxLength(25).IsRequired();
             modelBuilder.Entity<Ogretmen>().Property(o => o.Ad).HasColumnType("varchar").HasMaxLength(25).IsRequired();
             modelBuilder.Entity<Ogretmen>().Property(o =>o.Soyad).HasColumnType("varchar").HasMaxLength(25).IsRequired();
             modelBuilder.Entity<Ogretmen>().Property(o =>o.Dtarih).HasColumnType("datetime").IsRequired();
-            modelBuilder.Entity<Ogretmen>().Property(o =>o.Alan).HasColumnType("varchar").HasMaxLength(25).IsRequired();
-                        
+            modelBuilder.Entity<Ogretmen>().Property(o =>o.Alan).HasColumnType("varchar").HasMaxLength(25).IsRequired();       
+
+
         }
     }
 }

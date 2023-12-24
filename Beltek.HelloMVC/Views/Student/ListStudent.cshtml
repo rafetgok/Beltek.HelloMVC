@@ -7,8 +7,6 @@
 <a class="btn btn-primary btn-danger" asp-action="AddStudent" asp asp-controller="Student">Add Student</a>
 <h1>ListStudent</h1>
 
-
-
 <table class="table table-striped">
     <thead>
         <tr>
@@ -29,7 +27,10 @@
                 <td>@ogr.Soyad</td>
                 <td>@ogr.Numara</td>
                 <td>@ogr.Bolum</td>
-                <td> <a href="/Student/UpdateStudent/@ogr.Ogrenciid" class="btn btn-sm btn-primary btn-primary">Düzenle</a>  <a href="/Student/DeleteStudent/@ogr.Ogrenciid" class="btn btn-sm btn-danger" onclick="return confirm('Emin Misiniz..')">Sil</a>  </td>
+                <td>
+                    <a href="/Student/UpdateStudent/@ogr.Ogrenciid" class="btn btn-sm btn-primary btn-primary">Düzenle</a>
+                    <a href="/Student/DeleteStudent/@ogr.Ogrenciid" class="btn btn-sm btn-danger" onclick="return confirm('Emin Misiniz..')">Sil</a>
+                </td>
             </tr>
         }
     </tbody>

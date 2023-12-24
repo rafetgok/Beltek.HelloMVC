@@ -30,6 +30,9 @@ namespace Beltek.HelloMVC.Controllers
             return RedirectToAction("ListStudent"); //ekleme yaptıktan sonra direkt list studenta gönderir.
             //return View();
         }
+
+
+
         public IActionResult ListStudent()
         {
             List<Ogrenci> lst;
@@ -61,6 +64,8 @@ namespace Beltek.HelloMVC.Controllers
 
             return View(ogr);
         }
+
+
         [HttpPost] //post yazmazsak düzenle çalışmaz
         public IActionResult UpdateStudent(Ogrenci ogr)
         {
