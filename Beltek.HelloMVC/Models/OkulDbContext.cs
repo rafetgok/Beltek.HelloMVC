@@ -23,11 +23,17 @@ namespace Beltek.HelloMVC.Models
             modelBuilder.Entity<Ogrenci>().Property(o => o.Numara).HasColumnType("varchar").HasMaxLength(15).IsRequired();
             modelBuilder.Entity<Ogrenci>().Property(o => o.Bolum).HasColumnType("varchar").HasMaxLength(30).IsRequired();
 
+            //modelBuilder.Entity<Ogretmen>.ToTable("tblOgretmenler");
+
+
             modelBuilder.Entity<Ogretmen>().ToTable("tblOgretmenler");
-            modelBuilder.Entity<Ogretmen>().Property(o => o.Ad).HasColumnType("varchar").HasMaxLength(20).IsRequired();
-            modelBuilder.Entity<Ogretmen>().Property(o => o.Soyad).HasColumnType("varchar").HasMaxLength(30).IsRequired();
-            modelBuilder.Entity<Ogretmen>().Property(o => o.Numara).HasColumnType("varchar").HasMaxLength(15).IsRequired();
-            modelBuilder.Entity<Ogretmen>().Property(o => o.Bolum).HasColumnType("varchar").HasMaxLength(30).IsRequired();
+            modelBuilder.Entity<Ogretmen>().HasKey(o => o.Tckimlik);
+            modelBuilder.Entity<Ogretmen>().Property(o => o.Tckimlik).HasColumnType("varchar").HasMaxLength(25).IsRequired();
+            modelBuilder.Entity<Ogretmen>().Property(o => o.Ad).HasColumnType("varchar").HasMaxLength(25).IsRequired();
+            modelBuilder.Entity<Ogretmen>().Property(o =>o.Soyad).HasColumnType("varchar").HasMaxLength(25).IsRequired();
+            modelBuilder.Entity<Ogretmen>().Property(o =>o.Dtarih).HasColumnType("datetime").IsRequired();
+            modelBuilder.Entity<Ogretmen>().Property(o =>o.Alan).HasColumnType("varchar").HasMaxLength(25).IsRequired();
+                        
         }
     }
 }

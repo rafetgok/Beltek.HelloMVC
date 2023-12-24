@@ -37,7 +37,7 @@ namespace Beltek.HelloMVC.Controllers
             return View(lst);
         }
 
-        public IActionResult DeleteStudent(int id)
+        public IActionResult DeleteStudent(int id) //bunun viewi yok çünkü return olarak silip liststudent döndüryor
         {
             using (var ctx = new OkulDbContext())
             {

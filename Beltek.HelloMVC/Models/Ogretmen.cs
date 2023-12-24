@@ -4,31 +4,30 @@ namespace Beltek.HelloMVC.Models
 {
     public class Ogretmen : HumanBase
     {
-        public Ogretmen()
+        public Ogretmen() //bu counstructor metot yapıcı metto yanı default olarak yazılır.
         {
 
         }
 
-        public int Tckimlik { get; set; }
+        public string Tckimlik { get; set; }
         public string Ad { get; set; }
         public string Soyad { get; set; }
         public DateTime Dtarih { get; set; }
-        public string Universite { get; set; }
+        public string Alan { get; set; }
 
 
-        public Ogretmen(int tckimlik, string ad,String soyad,DateTime dtarih,string universite)
+        public Ogretmen(string tckimlik, string ad,String soyad,DateTime dtarih,string alan)
         {
             this.Tckimlik = tckimlik;
             this.Ad = ad;
             this.Soyad = soyad;
             this.Dtarih = dtarih;
-            this.Universite = universite;
+            this.Alan = alan;
         }
 
         public override string ToString()
         {
-            return $"{this.Tckimlik} {this.Ad} {this.Soyad} {this.Dtarih} {this.Universite}"; 
+            return $"{this.Tckimlik} {this.Ad} {this.Soyad} {this.Dtarih} {this.Alan}"; 
         }
-
     }
 }
