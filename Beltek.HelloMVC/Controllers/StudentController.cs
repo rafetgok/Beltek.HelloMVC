@@ -10,11 +10,15 @@ namespace Beltek.HelloMVC.Controllers
         {
             return RedirectToAction("ListStudent");
         }
+
+
         [HttpGet] //sunucadan kullanıcaya getirilmesi işlemi için yazdık view getiriyor. Normalde varsayılan olarak vardır yazmasakta olur.
         public ViewResult AddStudent()
         {
             return View();
         }
+
+
         [HttpPost]
         public IActionResult AddStudent(Ogrenci ogr)
         {

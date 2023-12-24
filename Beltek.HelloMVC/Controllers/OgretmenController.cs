@@ -8,5 +8,15 @@ namespace Beltek.HelloMVC.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public ViewResult AddTeacher()
+        {
+            return View();
+        }
+
+        //[HttpPost]
+
+
+
     }
 }
