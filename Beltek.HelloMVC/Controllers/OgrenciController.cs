@@ -22,16 +22,16 @@ namespace Beltek.HelloMVC.Controllers
             Ogrenci ogrenci = null;
             Ogretmen ogretmen = null;
 
-            if (id == 1)
-            {
-                ogrenci = new Ogrenci(1, "Ali", "Veli");
-                ogretmen = new Ogretmen { Id = 1, Ad = "Osman", Soyad = "Yıldız", Alan = "Matematik" };
-            }
-            else if (id == 2)
-            {
-                ogrenci = new Ogrenci(2, "Ahmet", "Mehmet");
-                ogretmen = new Ogretmen { Id = 2, Ad = "Veysel", Soyad = "Yılmaz", Alan = "Türkçe" };
-            }
+            //if (id == 1)
+            //{
+            //    ogrenci = new Ogrenci(1, "Ali", "Veli");
+            //    ogretmen = new Ogretmen { Id = 1, Ad = "Osman", Soyad = "Yıldız", Alan = "Matematik" };
+            //}
+            //else if (id == 2)
+            //{
+            //    ogrenci = new Ogrenci(2, "Ahmet", "Mehmet");
+            //    ogretmen = new Ogretmen { Id = 2, Ad = "Veysel", Soyad = "Yılmaz", Alan = "Türkçe" };
+            //}
 
             ViewData["ogr"] = ogrenci;
 

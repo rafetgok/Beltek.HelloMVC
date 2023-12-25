@@ -32,7 +32,6 @@ namespace Beltek.HelloMVC.Controllers
         }
 
 
-
         public IActionResult ListStudent()
         {
             List<Ogrenci> lst;
@@ -54,6 +53,7 @@ namespace Beltek.HelloMVC.Controllers
             }
             return RedirectToAction("listStudent");
         }
+
         public IActionResult UpdateStudent(int id)
         {
             Ogrenci ogr;
@@ -61,7 +61,6 @@ namespace Beltek.HelloMVC.Controllers
             {
                 ogr = ctx.Ogrenciler.Find(id);
             }
-
             return View(ogr);
         }
 
@@ -76,6 +75,5 @@ namespace Beltek.HelloMVC.Controllers
             }
             return RedirectToAction("listStudent");
         }
-
     }
 }

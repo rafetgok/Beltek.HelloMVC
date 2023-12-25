@@ -44,23 +44,25 @@ namespace Beltek.HelloMVC.Controllers
             return View(lst1);
         }
 
-        public IActionResult DeleteStudent(string Tckimlik) //bunun viewi yok çünkü return olarak silip liststudent döndüryor
+        public IActionResult DeleteStudent(string id) //bunun viewi yok çünkü return olarak silip liststudent döndüryor
         {
             using (var ctx = new OkulDbContext())
             {
-                Ogretmen ogrt = ctx.Ogretmenler.Find(Tckimlik);
+                Ogretmen ogrt = ctx.Ogretmenler.Find(id);
                 ctx.Ogretmenler.Remove(ogrt);
                 ctx.SaveChanges();
             }
             return RedirectToAction("listTeacher");
         }
 
-        public IActionResult UpdateTeacher(string Tckimlik)
+
+
+        public IActionResult UpdateTeacher(string id)
         {
             Ogretmen ogrt;
             using (var ctx = new OkulDbContext())
             {
-                ogrt = ctx.Ogretmenler.Find(Tckimlik);
+                ogrt = ctx.Ogretmenler.Find(id);
             }
             return View(ogrt);
         }
@@ -70,6 +72,7 @@ namespace Beltek.HelloMVC.Controllers
         public IActionResult UpdateStudent(Ogretmen ogrt)
         {
             using (var ctx = new OkulDbContext())
+
             {
                 ctx.Entry(ogrt).State = EntityState.Modified;
                 ctx.SaveChanges();

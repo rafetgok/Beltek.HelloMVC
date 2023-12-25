@@ -2,7 +2,7 @@
 
 namespace Beltek.HelloMVC.Models
 {
-    public class Ogretmen : HumanBase
+    public class Ogretmen 
     {
         public Ogretmen() //bu counstructor metot yapıcı metto yanı default olarak yazılır.
         {
@@ -16,9 +16,9 @@ namespace Beltek.HelloMVC.Models
         public string Alan { get; set; }
 
 
-        public Ogretmen(string tckimlik, string ad,String soyad,DateTime dtarih,string alan)
+        public Ogretmen(string id, string ad,String soyad,DateTime dtarih,string alan)
         {
-            this.Tckimlik = tckimlik;
+            this.Tckimlik = id;
             this.Ad = ad;
             this.Soyad = soyad;
             this.Dtarih = dtarih;
