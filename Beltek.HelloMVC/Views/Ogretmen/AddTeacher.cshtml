@@ -9,12 +9,12 @@
 <form asp-action="AddTeacher" asp-controller="Ogretmen" method="post" >
   
     <div>
-        <label class="form-label">Tckimlik</label>
-        <input asp-for="Tckimlik" class="form-control" />
+        <label  class="form-label">Tckimlik</label>
+        <input  asp-for="Tckimlik" class="form-control" placeholder="TC kimlik Giriniz..." />
     </div>
     <div>
         <label class="form-label">Ad</label>
-        <input asp-for="Ad" class="form-control" />
+        <input asp-for="Ad" class="form-control" placeholder="Adınızı Giriniz..." />
     </div>
 
     <div>
@@ -29,9 +29,9 @@
     <div>
         <label asp-for="Alan" class="form-label"></label>
         <input asp-for="Alan" class="form-control" />
-    </div>
+    </div><br />
 
-    <input class="btn btn-danger" type="submit" value="Kaydet" />
+    <input class="btn btn-secondary" type="submit" value="Kaydet" />
 
 
 
